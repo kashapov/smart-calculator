@@ -1,27 +1,37 @@
 class SmartCalculator {
+  
   constructor(initialValue) {
-    // your implementation
+    this.str = String(initialValue);
+    this.toString = function() { 
+      return eval(this.str) 
+    };
   }
 
   add(number) {
-    // your implementation
+    this.str += '+' + number;
+		return this;
   }
   
   subtract(number) {
-    // your implementation
+    this.str += '-' + number;
+		return this;
   }
 
   multiply(number) {
-    // your implementation
+    this.str += '*' + number;
+		return this;
   }
 
   devide(number) {
-    // your implementation
+    this.str += '/' + number;
+		return this;
   }
 
   pow(number) {
-    // your implementation
+    this.str += '**' + number;
+		return this;
   }
+
 }
 
 module.exports = SmartCalculator;
