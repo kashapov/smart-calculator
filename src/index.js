@@ -1,35 +1,35 @@
 class SmartCalculator {
-  
+
   constructor(initialValue) {
-    this.str = String(initialValue);
-    this.toString = function() { 
-      return eval(this.str) 
+    this.str = +initialValue;
+    this.toString = function () {
+      return eval(this.str)
     };
   }
 
   add(number) {
     this.str += '+' + number;
-		return this;
+    return this;
   }
-  
+
   subtract(number) {
     this.str += '-' + number;
-		return this;
+    return this;
   }
 
   multiply(number) {
     this.str += '*' + number;
-		return this;
+    return this;
   }
 
   devide(number) {
     this.str += '/' + number;
-		return this;
+    return this;
   }
 
   pow(number) {
     this.str += '**' + number;
-		return this;
+    return this;
   }
 
 }
